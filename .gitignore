@@ -9,3 +9,4 @@ db/schema.rb
 config/database.yml
 .idea/*
 tags
+config/s3.yml
