@@ -20,7 +20,8 @@ gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content
 gem 'spree_editor', :git => 'git://github.com/romul/spree_editor.git'
 gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git'
 gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git'
-
+gem 'hoptoad_notifier'
+gem 'heroku'
 gem 'hoe', '2.8.0' #prevents requirement of rubygem 1.4.0 - which is not supported by heroku
 
 

@@ -195,9 +195,16 @@ GEM
       rake (>= 0.8.7)
     gherkin (2.3.5)
       json (>= 1.4.6)
+    heroku (1.6.3)
+      json (>= 1.1.0)
+      launchy (>= 0.3.2)
+      rest-client (>= 1.2.0, < 2.0.0)
     highline (1.5.1)
     hoe (2.8.0)
       rake (>= 0.8.7)
+    hoptoad_notifier (2.4.9)
+      activesupport
+      builder
     i18n (0.5.0)
     jammit (0.6.0)
       closure-compiler (>= 0.1.0)
@@ -268,6 +275,8 @@ GEM
     rd_resource_controller (1.0.1)
     rd_unobtrusive_date_picker (0.1.0)
     recaptcha (0.3.1)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
     rspec (2.5.0)
       rspec-core (~> 2.5.0)
       rspec-expectations (~> 2.5.0)
@@ -321,7 +330,9 @@ DEPENDENCIES
   cucumber-rails (>= 0.3.2)
   database_cleaner
   factory_girl_rails
+  heroku
   hoe (= 2.8.0)
+  hoptoad_notifier
   jammit (= 0.6.0)
   launchy (>= 0.3.7)
   mysql
