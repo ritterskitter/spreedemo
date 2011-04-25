@@ -54,7 +54,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_active_shipping.git
-  revision: 8ea761e0b0fa3250399807e6847fe579b859a14f
+  revision: c582a227417ddc55ed7011b3208d37113ce87f09
   specs:
     spree_active_shipping (1.0.2)
       active_shipping (= 0.9.12)
