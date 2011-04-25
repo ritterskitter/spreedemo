@@ -54,9 +54,9 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_active_shipping.git
-  revision: cd1d2ab375ceddce15080c522f9364d49e8bc301
+  revision: 8ea761e0b0fa3250399807e6847fe579b859a14f
   specs:
-    spree_active_shipping (1.0.0)
+    spree_active_shipping (1.0.2)
       active_shipping (= 0.9.12)
       spree_core (>= 0.30.1)
 
@@ -190,7 +190,7 @@ GEM
     faraday (0.5.7)
       addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
-      rack (>= 1.1.0, < 2)
+      rack (< 2, >= 1.1.0)
     ffi (1.0.7)
       rake (>= 0.8.7)
     gherkin (2.3.5)
@@ -198,7 +198,7 @@ GEM
     heroku (1.6.3)
       json (>= 1.1.0)
       launchy (>= 0.3.2)
-      rest-client (>= 1.2.0, < 2.0.0)
+      rest-client (< 2.0.0, >= 1.2.0)
     highline (1.5.1)
     hoe (2.8.0)
       rake (>= 0.8.7)
