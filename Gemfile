@@ -5,21 +5,21 @@ source 'http://rubygems.org'
 
 gem 'mysql'
 gem 'sqlite3'
-gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => "0-50-stable"
+gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => "0-60-stable"
 gem 'aws-s3'
 gem 'jammit', '0.6.0'
 
-gem 'spree_recently_viewed', :git => 'git://github.com/jzw/spree_recently_viewed.git'
+gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git', :ref => '546b63cbd591049d22dcfc71564cb453e73cad8c'
 #disabling advanced_reporting as searchlogic is now removed
 #gem 'advanced_reporting', :git => 'git://github.com/neerajdotname/spree-advanced-reporting', :branch => 'rails3'
-gem 'spree_email_to_friend'
-gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git'
-gem 'spree_social', :git => 'git://github.com/spree/spree_social.git'
-gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git', :branch => 'rails3'
-gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git'
-gem 'spree_editor', :git => 'git://github.com/romul/spree_editor.git'
-gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git'
-gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git'
+gem 'spree_email_to_friend', :git => 'git://github.com/spree/spree_email_to_friend.git', :ref => '46217361d789520a563ff98e2596610ad99d4d51'
+gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git', :ref => '2b74f44739a18f4d646d7bfc1424d994b3ffdc71'
+gem 'spree_social', :git => 'git://github.com/spree/spree_social.git', :ref => "0d51b9d7a559f7d627300630656d40c4a6114489"
+gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git', :ref => "5172de86dd46905e6d60288584b567155055675e"
+gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git', :ref => '45b0050b96809c8fb0f21940f9407e9012a6d420'
+gem 'spree_editor', :git => 'git://github.com/romul/spree_editor.git', :ref => 'da5c7fcb980d39a2e0f71a7f132463c28ef8c665'
+gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git', :ref => 'cb4f80aeb9c9132201186e2febac58501fc7bf78'
+gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git', :ref => '059f638a1f56179074e3c9af44608f2cb8f6d046'
 gem 'hoptoad_notifier'
 gem 'heroku'
 gem 'hoe', '2.8.0' #prevents requirement of rubygem 1.4.0 - which is not supported by heroku
