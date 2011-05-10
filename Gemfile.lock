@@ -1,36 +1,22 @@
 GIT
-  remote: git://github.com/jzw/spree_recently_viewed.git
-  revision: 0c132204753f0fcf0d88e197522c400c8bd7dc4c
-  specs:
-    spree_recently_viewed (1.0.0)
-      spree_core (>= 0.40.0)
-
-GIT
-  remote: git://github.com/romul/spree_editor.git
-  revision: 614d2b9d4913f228b3e8d1a3a411f284428c50b1
-  specs:
-    spree_editor (0.40.0)
-      spree_core (>= 0.40.0)
-
-GIT
   remote: git://github.com/spree/spree.git
-  revision: a3d33fadae2ae06822fb59865f84e6701d68682e
+  revision: 4dfc885411a9a9086360ce1a7fa928242c0e6c6d
   branch: 0-50-stable
   specs:
-    spree (0.50.2)
-      spree_api (= 0.50.2)
-      spree_auth (= 0.50.2)
-      spree_core (= 0.50.2)
-      spree_dash (= 0.50.2)
-      spree_promo (= 0.50.2)
-      spree_sample (= 0.50.2)
-    spree_api (0.50.2)
-      spree_core (= 0.50.2)
-    spree_auth (0.50.2)
+    spree (0.50.99)
+      spree_api (= 0.50.99)
+      spree_auth (= 0.50.99)
+      spree_core (= 0.50.99)
+      spree_dash (= 0.50.99)
+      spree_promo (= 0.50.99)
+      spree_sample (= 0.50.99)
+    spree_api (0.50.99)
+      spree_core (= 0.50.99)
+    spree_auth (0.50.99)
       cancan (= 1.6.4)
       devise (= 1.3.1)
-      spree_core (= 0.50.2)
-    spree_core (0.50.2)
+      spree_core (= 0.50.99)
+    spree_core (0.50.99)
       activemerchant (= 1.12.0)
       acts_as_list (= 0.1.2)
       faker (= 0.9.5)
@@ -45,59 +31,83 @@ GIT
       state_machine (= 0.9.4)
       stringex (= 1.0.3)
       will_paginate (= 3.0.pre2)
-    spree_dash (0.50.2)
-      spree_core (= 0.50.2)
-    spree_promo (0.50.2)
-      spree_core (= 0.50.2)
-    spree_sample (0.50.2)
-      spree_core (= 0.50.2)
+    spree_dash (0.50.99)
+      spree_core (= 0.50.99)
+    spree_promo (0.50.99)
+      spree_core (= 0.50.99)
+    spree_sample (0.50.99)
+      spree_core (= 0.50.99)
 
 GIT
   remote: git://github.com/spree/spree_active_shipping.git
-  revision: c582a227417ddc55ed7011b3208d37113ce87f09
+  revision: cb4f80aeb9c9132201186e2febac58501fc7bf78
+  ref: cb4f80aeb9c9132201186e2febac58501fc7bf78
   specs:
-    spree_active_shipping (1.0.2)
+    spree_active_shipping (1.0.3)
       active_shipping (= 0.9.12)
       spree_core (>= 0.30.1)
 
 GIT
-  remote: git://github.com/spree/spree_paypal_express.git
-  revision: 39a3b00602d591e5c27bf13941aa5c13e4b95579
+  remote: git://github.com/spree/spree_editor.git
+  revision: da5c7fcb980d39a2e0f71a7f132463c28ef8c665
+  ref: da5c7fcb980d39a2e0f71a7f132463c28ef8c665
   specs:
-    spree_paypal_express (1.0.0)
+    spree_editor (0.50.0)
+      spree_core (>= 0.40.0)
+
+GIT
+  remote: git://github.com/spree/spree_paypal_express.git
+  revision: 5340cdb907a333bbd286811211d73c6a3b3a12d5
+  ref: 5340cdb907a333bbd286811211d73c6a3b3a12d5
+  specs:
+    spree_paypal_express (1.0.1)
       spree_core (>= 0.40.3)
 
 GIT
-  remote: git://github.com/spree/spree_related_products.git
-  revision: 2b74f44739a18f4d646d7bfc1424d994b3ffdc71
+  remote: git://github.com/spree/spree_recently_viewed.git
+  revision: 8518e54b2e50c94bb9cbd9c3f29dd78ee3bda5c6
+  ref: 8518e54b2e50c94bb9cbd9c3f29dd78ee3bda5c6
   specs:
-    spree_related_products (3.0.2)
+    spree_recently_viewed (1.1)
+      spree_core (>= 0.40.0)
+
+GIT
+  remote: git://github.com/spree/spree_related_products.git
+  revision: bee2e61193a713f8e993d250611a44a962ec7a2b
+  ref: bee2e61193a713f8e993d250611a44a962ec7a2b
+  specs:
+    spree_related_products (3.1)
       spree_core (>= 0.30.0)
 
 GIT
   remote: git://github.com/spree/spree_social.git
-  revision: bc3990a0c6cb48330922cae7c7b8d6b4d758d52a
+  revision: 383495542315fff44097b40dac543897e4e977b0
+  tag: v1.2
   specs:
-    spree_social (1.0.2)
-      oa-oauth (>= 0.1.6)
+    spree_social (1.2)
+      evernote
+      oa-oauth (>= 0.2.4)
       spree_auth (>= 0.40.0)
       spree_core (>= 0.40.0)
 
 GIT
   remote: git://github.com/spree/spree_static_content.git
-  revision: 83c00ada55339fde59ca06b133f3b6494afcefb4
+  revision: 45b0050b96809c8fb0f21940f9407e9012a6d420
+  ref: 45b0050b96809c8fb0f21940f9407e9012a6d420
   specs:
-    spree_static_content (0.40.1)
+    spree_static_content (0.40.2)
       spree_core (>= 0.30.0)
       spree_editor
 
 GIT
   remote: git://github.com/spree/spree_wishlist.git
-  revision: 568ff3be6ad9a5edbc9e1d571663fbb55b18ee8c
-  branch: rails3
+  revision: 5172de86dd46905e6d60288584b567155055675e
+  ref: 5172de86dd46905e6d60288584b567155055675e
   specs:
-    spree_wishlist (0.30.0.beta2)
-      spree_core (>= 0.30.1)
+    spree_wishlist (1.1)
+      spree_auth (>= 0.30.0)
+      spree_core (>= 0.30.0)
+      spree_email_to_friend (>= 0.30.0.beta2)
 
 GEM
   remote: http://rubygems.org/
@@ -136,14 +146,14 @@ GEM
       activesupport (= 3.0.7)
     activesupport (3.0.7)
     acts_as_list (0.1.2)
-    addressable (2.2.4)
+    addressable (2.2.5)
     arel (2.0.9)
     aws-s3 (0.6.2)
       builder
       mime-types
       xml-simple
     bcrypt-ruby (2.1.4)
-    braintree (2.9.1)
+    braintree (2.10.0)
       builder
     builder (2.1.2)
     cancan (1.6.4)
@@ -181,16 +191,18 @@ GEM
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    evernote (0.9.0)
+      thrift_client
     factory_girl (1.3.3)
     factory_girl_rails (1.0.1)
       factory_girl (~> 1.3)
       railties (>= 3.0.0)
     faker (0.9.5)
       i18n (~> 0.4)
-    faraday (0.5.7)
+    faraday (0.6.1)
       addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
-      rack (< 2, >= 1.1.0)
+      rack (>= 1.1.0, < 2)
     ffi (1.0.7)
       rake (>= 0.8.7)
     gherkin (2.3.5)
@@ -218,7 +230,7 @@ GEM
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
     linecache (0.43)
-    mail (2.2.17)
+    mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -229,26 +241,27 @@ GEM
       activesupport (~> 3.0.2)
       arel (~> 2.0.2)
     mime-types (1.16)
-    multi_json (0.0.5)
+    multi_json (1.0.1)
+    multi_xml (0.2.2)
     multipart-post (1.1.0)
     mysql (2.8.1)
     nested_set (1.6.4)
       activerecord (>= 3.0.0)
       railties (>= 3.0.0)
     nokogiri (1.4.4)
-    oa-core (0.2.0)
-      rack (~> 1.1)
-    oa-oauth (0.2.0)
-      multi_json (~> 0.0.2)
-      nokogiri (~> 1.4.2)
-      oa-core (= 0.2.0)
+    oa-core (0.2.5)
+    oa-oauth (0.2.5)
+      faraday (~> 0.6.1)
+      multi_json (~> 1.0.0)
+      multi_xml (~> 0.2.2)
+      oa-core (= 0.2.5)
       oauth (~> 0.4.0)
-      oauth2 (~> 0.1.1)
+      oauth2 (~> 0.4.1)
     oauth (0.4.4)
-    oauth2 (0.1.1)
-      faraday (~> 0.5.0)
-      multi_json (~> 0.0.4)
-    orm_adapter (0.0.4)
+    oauth2 (0.4.1)
+      faraday (~> 0.6.1)
+      multi_json (>= 0.0.5)
+    orm_adapter (0.0.5)
     paperclip (2.3.8)
       activerecord
       activesupport
@@ -310,11 +323,14 @@ GEM
     stringex (1.0.3)
     term-ansicolor (1.0.5)
     thor (0.14.6)
+    thrift (0.6.0)
+    thrift_client (0.6.2)
+      thrift (~> 0.6.0)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.26)
-    warden (1.0.3)
-      rack (>= 1.0.0)
+    tzinfo (0.3.27)
+    warden (1.0.4)
+      rack (>= 1.0)
     will_paginate (3.0.pre2)
     xml-simple (1.0.14)
     xpath (0.1.3)
@@ -341,7 +357,6 @@ DEPENDENCIES
   spree!
   spree_active_shipping!
   spree_editor!
-  spree_email_to_friend
   spree_paypal_express!
   spree_recently_viewed!
   spree_related_products!
