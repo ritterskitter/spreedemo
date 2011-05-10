@@ -1,6 +1,6 @@
 <% if get_recently_viewed_products.any? %>
   <div id="recent-products" class="list-box">
-    <h2>Viewed Products</h2>
+    <h2>Recently Viewed</h2>
     <ul>
       <% get_recently_viewed_products.each do |p| %>
         <li><%= link_to p.name, p %></li>
