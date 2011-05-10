@@ -5,7 +5,7 @@ source 'http://rubygems.org'
 
 gem 'mysql'
 gem 'sqlite3'
-gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => "0-50-stable"
+gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => "0-60-stable"
 gem 'aws-s3'
 gem 'jammit', '0.6.0'
 
