@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/Shopify/active_shipping.git
+  revision: 6be70c68574a9e420493ec628599da9cd9e84985
+  ref: 6be70c68574a9e420493
+  specs:
+    active_shipping (0.9.13)
+      activesupport (>= 2.3.5)
+
+GIT
   remote: git://github.com/spree/spree.git
   revision: 0ece81f5eaf2514823f20ff42729f5f0e27e6c3f
   branch: 0-60-stable
@@ -42,11 +50,11 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_active_shipping.git
-  revision: cb4f80aeb9c9132201186e2febac58501fc7bf78
-  ref: cb4f80aeb9c9132201186e2febac58501fc7bf78
+  revision: fb221c30522728da1b9b505e8420ec3358c60a82
+  ref: fb221c30522728da1b9b
   specs:
     spree_active_shipping (1.0.3)
-      active_shipping (= 0.9.12)
+      active_shipping (= 0.9.13)
       spree_core (>= 0.30.1)
 
 GIT
@@ -114,6 +122,10 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
+    POpen4 (0.1.4)
+      Platform (>= 0.4.0)
+      open4
+    Platform (0.4.0)
     abstract (1.0.0)
     actionmailer (3.0.7)
       actionpack (= 3.0.7)
@@ -128,8 +140,6 @@ GEM
       rack-mount (~> 0.6.14)
       rack-test (~> 0.5.7)
       tzinfo (~> 0.3.23)
-    active_shipping (0.9.12)
-      activesupport (>= 2.3.5)
     activemerchant (1.14.0)
       activesupport (>= 2.3.8)
       braintree (>= 2.0.0)
@@ -168,10 +178,10 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.27)
       xpath (~> 0.1.2)
-    celerity (0.8.8)
+    celerity (0.8.9)
     childprocess (0.1.8)
       ffi (~> 1.0.6)
-    closure-compiler (1.0.0)
+    closure-compiler (1.1.1)
     columnize (0.3.2)
     configuration (1.2.0)
     cucumber (0.10.2)
@@ -180,12 +190,12 @@ GEM
       gherkin (>= 2.3.5)
       json (>= 1.4.6)
       term-ansicolor (>= 1.0.5)
-    cucumber-rails (0.4.0)
+    cucumber-rails (0.4.1)
       cucumber (>= 0.10.1)
       nokogiri (>= 1.4.4)
       rack-test (>= 0.5.7)
     culerity (0.2.15)
-    database_cleaner (0.6.6)
+    database_cleaner (0.6.7)
     devise (1.3.3)
       bcrypt-ruby (~> 2.1.2)
       orm_adapter (~> 0.0.3)
@@ -207,12 +217,12 @@ GEM
       rack (>= 1.1.0, < 2)
     ffi (1.0.7)
       rake (>= 0.8.7)
-    gherkin (2.3.5)
+    gherkin (2.3.7)
       json (>= 1.4.6)
-    heroku (1.6.3)
-      json (>= 1.1.0)
+    heroku (2.1.1)
       launchy (>= 0.3.2)
-      rest-client (< 2.0.0, >= 1.2.0)
+      rest-client (~> 1.6.1)
+      term-ansicolor (~> 1.0.5)
     highline (1.5.1)
     hoe (2.8.0)
       rake (>= 0.8.7)
@@ -263,6 +273,7 @@ GEM
     oauth2 (0.4.1)
       faraday (~> 0.6.1)
       multi_json (>= 0.0.5)
+    open4 (1.0.1)
     orm_adapter (0.0.5)
     paperclip (2.3.8)
       activerecord
@@ -299,7 +310,7 @@ GEM
       rspec-core (~> 2.5.0)
       rspec-expectations (~> 2.5.0)
       rspec-mocks (~> 2.5.0)
-    rspec-core (2.5.1)
+    rspec-core (2.5.2)
     rspec-expectations (2.5.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.5.0)
@@ -314,7 +325,7 @@ GEM
     ruby-debug-base (0.10.4)
       linecache (>= 0.3)
     rubyzip (0.9.4)
-    selenium-webdriver (0.1.4)
+    selenium-webdriver (0.2.0)
       childprocess (>= 0.1.7)
       ffi (>= 1.0.7)
       json_pure
@@ -337,15 +348,17 @@ GEM
     warden (1.0.4)
       rack (>= 1.0)
     will_paginate (3.0.pre2)
-    xml-simple (1.0.14)
-    xpath (0.1.3)
+    xml-simple (1.0.15)
+    xpath (0.1.4)
       nokogiri (~> 1.3)
-    yui-compressor (0.9.4)
+    yui-compressor (0.9.6)
+      POpen4 (>= 0.1.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_shipping!
   aws-s3
   capybara (= 0.4.0)
   cucumber-rails (>= 0.3.2)

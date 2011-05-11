@@ -18,11 +18,12 @@ gem 'spree_social', :git => 'git://github.com/spree/spree_social.git', :tag => '
 gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git', :ref => '5172de86dd46905e6d60288584b567155055675e'
 gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git', :ref => '45b0050b96809c8fb0f21940f9407e9012a6d420'
 gem 'spree_editor', :git => 'git://github.com/spree/spree_editor.git', :ref => 'da5c7fcb980d39a2e0f71a7f132463c28ef8c665'
-gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git', :ref => 'cb4f80aeb9c9132201186e2febac58501fc7bf78'
+gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git', :ref => 'fb221c30522728da1b9b'
 gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git', :ref => '5340cdb907a333bbd286811211d73c6a3b3a12d5'
 gem 'hoptoad_notifier'
 gem 'heroku'
 gem 'hoe', '2.8.0' #prevents requirement of rubygem 1.4.0 - which is not supported by heroku
+gem 'active_shipping', :git => 'git://github.com/Shopify/active_shipping.git', :ref => '6be70c68574a9e420493' #only required until gem release 0.9.14 or later 
 
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
