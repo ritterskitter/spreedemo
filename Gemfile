@@ -5,8 +5,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
 
-gem 'mysql2', '0.3.6'
-gem 'sqlite3'
 gem 'aws-s3'
 gem 'hoptoad_notifier'
 
@@ -34,15 +32,20 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'unicorn'
+  gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-  #gem 'shoulda'
   gem "rspec-rails", ">= 2.0.1"
   gem "cucumber-rails", ">= 0.3.2"
   gem "capybara", "= 0.4.0"
   gem 'ruby-debug'
   gem "launchy", ">= 0.3.7"
+end
+
+group :production do
+  gem 'foreman'
+  gem 'mysql2'
+  gem 'unicorn'
 end
 
 gem 'deface', :git => 'git://github.com/railsdog/deface.git'
