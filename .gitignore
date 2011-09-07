@@ -10,3 +10,4 @@ config/database.yml
 .idea/*
 tags
 config/s3.yml
+.sass-cache

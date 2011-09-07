@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110125135821) do
+ActiveRecord::Schema.define(:version => 20110906181503) do
+
+  create_table "activators", :force => true do |t|
+    t.string   "description"
+    t.datetime "expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "starts_at"
+    t.string   "name"
+    t.string   "event_name"
+    t.string   "type"
+  end
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -43,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20110125135821) do
     t.boolean  "locked"
     t.integer  "originator_id"
     t.string   "originator_type"
+    t.boolean  "eligible",                                      :default => true
   end
 
   add_index "adjustments", ["order_id"], :name => "index_adjustments_on_order_id"
@@ -235,6 +247,7 @@ ActiveRecord::Schema.define(:version => 20110125135821) do
     t.string   "meta_description"
     t.string   "layout"
     t.boolean  "show_in_sidebar",  :default => false, :null => false
+    t.string   "meta_title"
   end
 
   add_index "pages", ["slug"], :name => "index_pages_on_slug"
@@ -362,8 +375,20 @@ ActiveRecord::Schema.define(:version => 20110125135821) do
   add_index "products_taxons", ["product_id"], :name => "index_products_taxons_on_product_id"
   add_index "products_taxons", ["taxon_id"], :name => "index_products_taxons_on_taxon_id"
 
+  create_table "promotion_action_line_items", :force => true do |t|
+    t.integer "promotion_action_id"
+    t.integer "variant_id"
+    t.integer "quantity",            :default => 1
+  end
+
+  create_table "promotion_actions", :force => true do |t|
+    t.integer "activator_id"
+    t.integer "position"
+    t.string  "type"
+  end
+
   create_table "promotion_rules", :force => true do |t|
-    t.integer  "promotion_id"
+    t.integer  "activator_id"
     t.integer  "user_id"
     t.integer  "product_group_id"
     t.datetime "created_at"
@@ -381,19 +406,6 @@ ActiveRecord::Schema.define(:version => 20110125135821) do
 
   add_index "promotion_rules_users", ["promotion_rule_id"], :name => "index_promotion_rules_users_on_promotion_rule_id"
   add_index "promotion_rules_users", ["user_id"], :name => "index_promotion_rules_users_on_user_id"
-
-  create_table "promotions", :force => true do |t|
-    t.string   "code"
-    t.string   "description"
-    t.integer  "usage_limit"
-    t.boolean  "combine"
-    t.datetime "expires_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "starts_at"
-    t.string   "match_policy", :default => "all"
-    t.string   "name"
-  end
 
   create_table "properties", :force => true do |t|
     t.string   "name"
@@ -500,6 +512,14 @@ ActiveRecord::Schema.define(:version => 20110125135821) do
     t.integer "country_id"
   end
 
+  create_table "stylesheets", :force => true do |t|
+    t.string   "name"
+    t.text     "css"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "theme_id"
+  end
+
   create_table "tax_categories", :force => true do |t|
     t.string   "name"
     t.string   "description"
@@ -551,6 +571,13 @@ ActiveRecord::Schema.define(:version => 20110125135821) do
   add_index "taxons", ["parent_id"], :name => "index_taxons_on_parent_id"
   add_index "taxons", ["permalink"], :name => "index_taxons_on_permalink"
   add_index "taxons", ["taxonomy_id"], :name => "index_taxons_on_taxonomy_id"
+
+  create_table "themes", :force => true do |t|
+    t.string   "name"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tokenized_permissions", :force => true do |t|
     t.integer  "permissable_id"
@@ -623,6 +650,20 @@ ActiveRecord::Schema.define(:version => 20110125135821) do
   end
 
   add_index "variants", ["product_id"], :name => "index_variants_on_product_id"
+
+  create_table "view_overrides", :force => true do |t|
+    t.string   "virtual_path"
+    t.string   "name"
+    t.string   "replace_with"
+    t.string   "target"
+    t.string   "selector"
+    t.string   "closing_selector"
+    t.boolean  "disabled"
+    t.text     "replacement"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "theme_id"
+  end
 
   create_table "wished_products", :force => true do |t|
     t.integer  "variant_id"

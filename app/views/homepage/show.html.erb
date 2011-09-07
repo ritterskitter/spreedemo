@@ -4,22 +4,22 @@
       <ul>
         <li id="b1">
           <a href="/pg/new-arrivals">
-            <img src="/images/dogradio/homepage/slideshow/new-arrivals.jpg" width="960" height="303" alt="New Arrivals">
+            <%= image_tag "store/homepage/slideshow/new-arrivals.jpg", :width => 960, :height => 303, :alt => "New Arrivals" %>
           </a>
         </li>
         <li id="b2">
           <a href="/pg/car-stereos">
-            <img src="/images/dogradio/homepage/slideshow/car-stereos.jpg"  width="960" height="303" alt="Car Stereos">
+            <%= image_tag "store/homepage/slideshow/car-stereos.jpg", :width => 960, :height => 303, :alt => "New Arrivals" %>
           </a>
         </li>
         <li id="b3">
           <a href="/pg/accessory-sale">
-            <img src="/images/dogradio/homepage/slideshow/accessories.jpg" width="960" height="303" alt="Accessory Sale">
+            <%= image_tag "store/homepage/slideshow/accessories.jpg", :width => 960, :height => 303, :alt => "New Arrivals" %>
           </a>
         </li>
         <li id="b4">
           <a href="/pg/clearance-event">
-            <img src="/images/dogradio/homepage/slideshow/clearance.jpg" width="960" height="303" alt="Clearance Event">
+            <%= image_tag "store/homepage/slideshow/clearance.jpg", :width => 960, :height => 303, :alt => "New Arrivals" %>
           </a>
         </li>
       </ul>
@@ -46,7 +46,7 @@
     <div class="taxon">
       <h3><%= link_to group.name, url %></h3>
       <%= link_to url do %>
-        <%= image_tag("dogradio/homepage/taxons/#{group.permalink}.jpg", :class => "image", :alt => group.name) %><br>
+        <%= image_tag("store/homepage/taxons/#{group.permalink}.jpg", :class => "image", :alt => group.name) %><br>
       <% end %>
       <%= link_to 'View More', url, :class => 'button' %>
     </div>

@@ -1,3 +1,5 @@
+StateMachine::Machine.ignore_method_conflicts = true
+
 Order.class_eval do
 
   state_machines.clear

@@ -8,9 +8,20 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module RailsdogRadio
   class Application < Rails::Application
-  require 'spree_site'
-  config.middleware.use "RedirectLegacyProductUrl"
-  config.middleware.use "SeoAssist"
+
+    config.to_prepare do
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
+
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
+        Rails.application.config.cache_classes ? require(c) : load(c)
+      end
+    end
+
+    config.middleware.use "RedirectLegacyProductUrl"
+    config.middleware.use "SeoAssist"
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -41,7 +52,7 @@ module RailsdogRadio
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    config.assets.enabled = true
   end
 end
-
-require 'railsdog_radio_hooks'
