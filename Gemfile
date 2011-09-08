@@ -46,6 +46,7 @@ group :production do
   gem 'foreman'
   gem 'mysql2'
   gem 'unicorn'
+  gem 'therubyracer'
 end
 
 gem 'deface', :git => 'git://github.com/railsdog/deface.git'
