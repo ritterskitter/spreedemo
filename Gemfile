@@ -47,6 +47,7 @@ group :production do
   gem 'mysql2'
   gem 'unicorn'
   gem 'therubyracer'
+  gem 'newrelic_rpm'
 end
 
 gem 'deface', :git => 'git://github.com/railsdog/deface.git'
