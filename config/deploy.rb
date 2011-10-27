@@ -1,11 +1,11 @@
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
 require "bundler/capistrano"
+load 'deploy/assets'
 
 set :application, "demo"
 set :user, 'spree'
 set :group, 'www-data'
- 
 
 set :rvm_ruby_string, '1.8.7-p352' 
 
@@ -51,7 +51,7 @@ namespace :deploy do
   desc "Symlink shared configs and folders on each release."
   task :symlink_shared do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    run "ln -nfs #{shared_path}/config/s3.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/s3.yml #{release_path}/config/s3.yml"
     run "ln -nfs #{shared_path}/config/Procfile #{release_path}/Procfile"
   end
 
@@ -61,7 +61,7 @@ namespace :deploy do
   end
 end
 
+before 'deploy:assets:precompile', 'deploy:symlink_shared'
 after 'deploy:update_code', 'deploy:symlink_shared'
-# after 'deploy:symlink_shared', 'deploy:precompile_assets'
 after 'deploy:update', 'foreman:export'
 after 'deploy:update', 'foreman:restart'

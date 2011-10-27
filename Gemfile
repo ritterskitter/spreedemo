@@ -22,6 +22,8 @@ gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express
 gem 'active_shipping', :git => 'git://github.com/Shopify/active_shipping.git', :ref => '6be70c68574a9e420493' #only required until gem release 0.9.14 or later 
 gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git'
 
+gem 'spree_analytics', :git => 'https://ghro:btDMNirRZ8YF2V@github.com/spree/spree_analytics.git'
+
 gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
 gem 'capistrano'
 
@@ -51,3 +53,4 @@ group :production do
 end
 
 gem 'deface', :git => 'git://github.com/railsdog/deface.git'
+

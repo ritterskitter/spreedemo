@@ -133,6 +133,14 @@ GIT
     spree_wishlist (1.2)
       spree_core (>= 0.30.1)
 
+GIT
+  remote: https://ghro:btDMNirRZ8YF2V@github.com/spree/spree_analytics.git
+  revision: 3d2e0324c6803f1f1db925415debedba667c68d3
+  specs:
+    spree_analytics (0.1.0)
+      rest-client
+      spree_core (>= 0.60.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -346,6 +354,8 @@ GEM
     rd_resource_controller (1.0.1)
     rdoc (3.9.4)
     recaptcha (0.3.1)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -429,6 +439,7 @@ DEPENDENCIES
   sass-rails (~> 3.1.0)
   spree!
   spree_active_shipping!
+  spree_analytics!
   spree_editor!
   spree_email_to_friend!
   spree_paypal_express!
