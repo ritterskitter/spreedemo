@@ -23,6 +23,7 @@ gem 'active_shipping', :git => 'git://github.com/Shopify/active_shipping.git', :
 gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git'
 
 gem 'spree_analytics', :git => 'https://ghro:btDMNirRZ8YF2V@github.com/spree/spree_analytics.git'
+#gem 'spree_analytics', :path => '../spree_analytics'
 
 gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
 gem 'capistrano'
