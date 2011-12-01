@@ -1,4 +1,7 @@
 RailsdogRadio::Application.routes.draw do
+  # Mount Spree's routes
+  mount Spree::Core::Engine, :at => '/'
+
   # redirect railsdogradio.com to the demo subdomain
   constraints(:host => /railsdogradio.com/) do
     root :to => redirect("http://demo.spreecommerce.com")
