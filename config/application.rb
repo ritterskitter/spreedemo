@@ -19,8 +19,8 @@ module RailsdogRadio
       end
     end
 
-    config.middleware.use "RedirectLegacyProductUrl"
-    config.middleware.use "SeoAssist"
+    config.middleware.use "Spree::Core::Middleware::RedirectLegacyProductUrl"
+    config.middleware.use "Spree::Core::Middleware::SeoAssist"
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
