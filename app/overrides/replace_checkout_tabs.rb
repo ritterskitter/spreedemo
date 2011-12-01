@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path => 'checkout/edit',
+Deface::Override.new(:virtual_path => 'spree/checkout/edit',
                      :name => 'replace_checkout_tabs',
                      :replace => 'div#tabs',
                      :sequence => {:after => 'replace_checkout'},

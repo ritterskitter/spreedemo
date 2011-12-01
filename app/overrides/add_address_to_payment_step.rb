@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path => 'checkout/_payment',
+Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
                      :name => 'add_address_to_payment_step',
                      :insert_before => 'ul#payment',
                      :sequence => {:after => 'replace_payment'},
