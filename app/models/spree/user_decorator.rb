@@ -1,8 +1,8 @@
-class UserDecorator
+class Spree::UserDecorator
   include CanCan::Ability
 
   def initialize(user)
-    user ||= User.new
+    user ||= Spree::User.new
     if user.has_role? 'read_only'
       can :read, :all
     end
@@ -10,4 +10,4 @@ class UserDecorator
 
 end
 
-Ability.register_ability(UserDecorator)
+Spree::Ability.register_ability(Spree::UserDecorator)
