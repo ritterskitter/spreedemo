@@ -1,4 +1,4 @@
-TaxonsHelper.module_eval do
+Spree::TaxonsHelper.module_eval do
   def breadcrumbs(options={})
     return "" if current_page?("/")
 

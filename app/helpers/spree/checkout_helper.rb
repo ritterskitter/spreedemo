@@ -1,4 +1,4 @@
-module CheckoutHelper
+module Spree::CheckoutHelper
 
   def checkout_progress
     states = %w(payment confirm complete)
