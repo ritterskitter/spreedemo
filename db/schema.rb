@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111201173435) do
+ActiveRecord::Schema.define(:version => 20120112163876) do
 
   create_table "authentication_methods", :force => true do |t|
     t.string   "environment"
@@ -18,26 +18,6 @@ ActiveRecord::Schema.define(:version => 20111201173435) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "pages", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.string   "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "show_in_header",   :default => false, :null => false
-    t.boolean  "show_in_footer",   :default => false, :null => false
-    t.string   "foreign_link"
-    t.integer  "position",         :default => 1,     :null => false
-    t.boolean  "visible",          :default => true
-    t.string   "meta_keywords"
-    t.string   "meta_description"
-    t.string   "layout"
-    t.boolean  "show_in_sidebar",  :default => false, :null => false
-    t.string   "meta_title"
-  end
-
-  add_index "pages", ["slug"], :name => "index_pages_on_slug"
 
   create_table "paypal_accounts", :force => true do |t|
     t.string "email"
@@ -90,13 +70,14 @@ ActiveRecord::Schema.define(:version => 20111201173435) do
     t.datetime "updated_at"
     t.string   "state_name"
     t.string   "alternative_phone"
+    t.string   "company"
   end
 
   add_index "spree_addresses", ["firstname"], :name => "index_addresses_on_firstname"
   add_index "spree_addresses", ["lastname"], :name => "index_addresses_on_lastname"
 
   create_table "spree_adjustments", :force => true do |t|
-    t.integer  "order_id"
+    t.integer  "adjustable_id"
     t.decimal  "amount",          :precision => 8, :scale => 2
     t.string   "label"
     t.datetime "created_at"
@@ -108,9 +89,10 @@ ActiveRecord::Schema.define(:version => 20111201173435) do
     t.integer  "originator_id"
     t.string   "originator_type"
     t.boolean  "eligible",                                      :default => true
+    t.string   "adjustable_type"
   end
 
-  add_index "spree_adjustments", ["order_id"], :name => "index_adjustments_on_order_id"
+  add_index "spree_adjustments", ["adjustable_id"], :name => "index_adjustments_on_order_id"
 
   create_table "spree_assets", :force => true do |t|
     t.integer  "viewable_id"
@@ -278,6 +260,25 @@ ActiveRecord::Schema.define(:version => 20111201173435) do
 
   add_index "spree_orders", ["number"], :name => "index_orders_on_number"
 
+  create_table "spree_pages", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "show_in_header",   :default => false, :null => false
+    t.boolean  "show_in_footer",   :default => false, :null => false
+    t.string   "foreign_link"
+    t.integer  "position",         :default => 1,     :null => false
+    t.boolean  "visible",          :default => true
+    t.string   "meta_keywords"
+    t.string   "meta_description"
+    t.string   "layout"
+    t.boolean  "show_in_sidebar",  :default => false, :null => false
+  end
+
+  add_index "spree_pages", ["slug"], :name => "index_pages_on_slug"
+
   create_table "spree_payment_methods", :force => true do |t|
     t.string   "type"
     t.string   "name"
@@ -304,17 +305,14 @@ ActiveRecord::Schema.define(:version => 20111201173435) do
   end
 
   create_table "spree_preferences", :force => true do |t|
-    t.string   "name",       :limit => 100, :null => false
-    t.integer  "owner_id",                  :null => false
-    t.string   "owner_type", :limit => 50,  :null => false
-    t.integer  "group_id"
-    t.string   "group_type", :limit => 50
     t.text     "value"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "key"
+    t.string   "value_type"
   end
 
-  add_index "spree_preferences", ["owner_id", "owner_type", "name", "group_id", "group_type"], :name => "ix_prefs_on_owner_attr_pref", :unique => true
+  add_index "spree_preferences", ["key"], :name => "index_spree_preferences_on_key", :unique => true
 
   create_table "spree_product_groups", :force => true do |t|
     t.string "name"
@@ -493,6 +491,10 @@ ActiveRecord::Schema.define(:version => 20111201173435) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "display_on"
+    t.integer  "shipping_category_id"
+    t.boolean  "match_none"
+    t.boolean  "match_all"
+    t.boolean  "match_one"
   end
 
   create_table "spree_state_events", :force => true do |t|
@@ -522,10 +524,11 @@ ActiveRecord::Schema.define(:version => 20111201173435) do
 
   create_table "spree_tax_rates", :force => true do |t|
     t.integer  "zone_id"
-    t.decimal  "amount",          :precision => 8, :scale => 4
+    t.decimal  "amount",            :precision => 8, :scale => 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "tax_category_id"
+    t.boolean  "included_in_price",                               :default => false
   end
 
   create_table "spree_taxonomies", :force => true do |t|
@@ -631,6 +634,7 @@ ActiveRecord::Schema.define(:version => 20111201173435) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "default_tax", :default => false
   end
 
   create_table "user_authentications", :force => true do |t|
