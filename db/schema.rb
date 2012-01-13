@@ -10,39 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120112163876) do
-
-  create_table "authentication_methods", :force => true do |t|
-    t.string   "environment"
-    t.boolean  "active"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20120112174535) do
 
   create_table "paypal_accounts", :force => true do |t|
     t.string "email"
     t.string "payer_id"
     t.string "payer_country"
     t.string "payer_status"
-  end
-
-  create_table "relation_types", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "applies_to"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "relations", :force => true do |t|
-    t.integer  "relation_type_id"
-    t.integer  "relatable_id"
-    t.string   "relatable_type"
-    t.integer  "related_to_id"
-    t.string   "related_to_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.decimal  "discount_amount",  :precision => 8, :scale => 2, :default => 0.0
   end
 
   create_table "spree_activators", :force => true do |t|
@@ -110,6 +84,13 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
 
   add_index "spree_assets", ["viewable_id"], :name => "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], :name => "index_assets_on_viewable_type_and_type"
+
+  create_table "spree_authentication_methods", :force => true do |t|
+    t.string   "environment"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_calculators", :force => true do |t|
     t.string   "type"
@@ -275,6 +256,7 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
     t.string   "meta_description"
     t.string   "layout"
     t.boolean  "show_in_sidebar",  :default => false, :null => false
+    t.string   "meta_title"
   end
 
   add_index "spree_pages", ["slug"], :name => "index_pages_on_slug"
@@ -356,7 +338,7 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
   add_index "spree_product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
   create_table "spree_products", :force => true do |t|
-    t.string   "name",                                               :default => "", :null => false
+    t.string   "name",                                                              :null => false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -367,7 +349,7 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
     t.datetime "deleted_at"
     t.string   "meta_description"
     t.string   "meta_keywords"
-    t.integer  "count_on_hand",                                      :default => 0,  :null => false
+    t.integer  "count_on_hand",                                      :default => 0, :null => false
     t.decimal  "rrp",                  :precision => 8, :scale => 2
   end
 
@@ -440,6 +422,25 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "spree_relation_types", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "applies_to"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_relations", :force => true do |t|
+    t.integer  "relation_type_id"
+    t.integer  "relatable_id"
+    t.string   "relatable_type"
+    t.integer  "related_to_id"
+    t.string   "related_to_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal  "discount_amount",  :precision => 8, :scale => 2, :default => 0.0
   end
 
   create_table "spree_return_authorizations", :force => true do |t|
@@ -538,10 +539,10 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
   end
 
   create_table "spree_taxons", :force => true do |t|
-    t.integer  "taxonomy_id",                      :null => false
+    t.integer  "taxonomy_id",                            :null => false
     t.integer  "parent_id"
-    t.integer  "position",          :default => 0
-    t.string   "name",                             :null => false
+    t.integer  "position",            :default => 0
+    t.string   "name",                                   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "permalink"
@@ -552,6 +553,15 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
     t.text     "description"
+    t.boolean  "hidden",              :default => false
+    t.boolean  "disabled",            :default => false
+    t.string   "short_name"
+    t.boolean  "homepage",            :default => false
+    t.string   "display_style"
+    t.string   "banner_file_name"
+    t.string   "banner_content_type"
+    t.integer  "banner_file_size"
+    t.datetime "banner_updated_at"
   end
 
   add_index "spree_taxons", ["parent_id"], :name => "index_taxons_on_parent_id"
@@ -572,6 +582,15 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
     t.string   "environment"
     t.string   "analytics_id"
     t.boolean  "active",       :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_user_authentications", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "nickname"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -606,7 +625,7 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
 
   create_table "spree_variants", :force => true do |t|
     t.integer  "product_id"
-    t.string   "sku",                                         :default => "",    :null => false
+    t.string   "sku",                                                            :null => false
     t.decimal  "price",         :precision => 8, :scale => 2,                    :null => false
     t.decimal  "weight",        :precision => 8, :scale => 2
     t.decimal  "height",        :precision => 8, :scale => 2
@@ -620,6 +639,24 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
   end
 
   add_index "spree_variants", ["product_id"], :name => "index_variants_on_product_id"
+
+  create_table "spree_wished_products", :force => true do |t|
+    t.integer  "variant_id"
+    t.integer  "wishlist_id"
+    t.text     "remark"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_wishlists", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "access_hash"
+    t.boolean  "is_private",  :default => true,  :null => false
+    t.boolean  "is_default",  :default => false, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_zone_members", :force => true do |t|
     t.integer  "zone_id"
@@ -635,33 +672,6 @@ ActiveRecord::Schema.define(:version => 20120112163876) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "default_tax", :default => false
-  end
-
-  create_table "user_authentications", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "nickname"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "wished_products", :force => true do |t|
-    t.integer  "variant_id"
-    t.integer  "wishlist_id"
-    t.text     "remark"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "wishlists", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "name"
-    t.string   "access_hash"
-    t.boolean  "is_private",  :default => true,  :null => false
-    t.boolean  "is_default",  :default => false, :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end
