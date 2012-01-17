@@ -3,7 +3,7 @@ Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
                      :insert_after => 'ul#payment',
                      :sequence => {:after => 'replace_payment'},
                      :text => %q{
-  <% if Promotion.count > 0 %>
+  <% if Spree::Promotion.count > 0 %>
     <hr />
     <ul class="fields">
       <h2>Coupon Code</h2>

@@ -134,7 +134,7 @@ Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
         <li>
           <%= ship_form.label :country_id, "Country" %>
           <span id="scountry">
-            <%= ship_form.collection_select :country_id, Country.all, :id, :name %>
+            <%= ship_form.collection_select :country_id, Spree::Country.all, :id, :name %>
           </span>
         </li>
         <li>
