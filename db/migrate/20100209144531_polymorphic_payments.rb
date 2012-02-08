@@ -1,6 +1,4 @@
 class PolymorphicPayments < ActiveRecord::Migration
-  class Creditcard < ActiveRecord::Base; end
-
   def self.up
     remove_column :payments, :type
     remove_column :payments, :creditcard_id

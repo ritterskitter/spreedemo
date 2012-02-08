@@ -1,6 +1,4 @@
 class UpdateCalculableTypeForPromotions < ActiveRecord::Migration
-  class Calculator < ActiveRecord::Base; end
-
   def self.up
     Calculator.update_all("calculable_type = 'Promotion'", "calculable_type = 'Coupon'")
   end

@@ -1,6 +1,4 @@
 class DeleteInProgressOrders < ActiveRecord::Migration
-  class Order < ActiveRecord::Base; end
-
   def self.up
     Order.delete_all(:state=>'in_progress')
     delete_orphans('adjustments')

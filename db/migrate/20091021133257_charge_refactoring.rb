@@ -8,8 +8,6 @@ class ChargeRefactoring < ActiveRecord::Migration
     has_one :checkout
   end
 
-  class Adjustment < ActiveRecord::Base; end
-
   def self.up
     add_column :orders, :completed_at, :timestamp
     Order.reset_column_information

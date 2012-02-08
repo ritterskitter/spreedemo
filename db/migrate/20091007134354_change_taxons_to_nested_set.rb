@@ -1,6 +1,4 @@
 class ChangeTaxonsToNestedSet < ActiveRecord::Migration
-  class Taxon < ActiveRecord::Base; end;
-
   def self.up
     add_column :taxons, :lft, :integer
     add_column :taxons, :rgt, :integer

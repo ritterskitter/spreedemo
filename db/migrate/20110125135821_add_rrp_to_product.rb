@@ -1,6 +1,4 @@
 class AddRrpToProduct < ActiveRecord::Migration
-  class Product < ActiveRecord::Base; end
-
   def self.up
     add_column :products, :rrp, :decimal, :precision => 8, :scale => 2
 

@@ -3,8 +3,6 @@ class MigrateCheckoutToOrders < ActiveRecord::Migration
   class Checkout < ActiveRecord::Base
   end
 
-  class Order < ActiveRecord::Base; end
-
   def self.up
     Order.find_each do |order|
       checkout = update_order(order)
