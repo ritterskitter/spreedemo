@@ -17,8 +17,12 @@ body#checkout div[role='checkout'] div#tabs li {
   float: left;
   background-color: #eceded;
   border-bottom: 5px solid #b7cbe9;
-  width: 216px;
+  padding-left: 20px;
+  width: 197px !important;;
   height: 70px;
+}
+body#checkout div[role='checkout'] div#tabs li:last-child {
+  width: 196px !important;
 }
 
 body#checkout div[role='checkout'] div#tabs li.active {

@@ -78,7 +78,7 @@ Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
       <ul class="fields">
         <li>
           <%= check_box_tag 'order[use_billing]', '1', (!(@order.bill_address.empty? && @order.ship_address.empty?) && @order.bill_address.eql?(@order.ship_address)) %>
-          <label class="tick">Use my shipping address</label>
+          <label class="tick">Use my billing address</label>
         </li>
       </ul>
       <ul class="inner fields">

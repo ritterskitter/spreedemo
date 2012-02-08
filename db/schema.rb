@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120117182621) do
+ActiveRecord::Schema.define(:version => 20120207143456) do
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "show_in_header",   :default => false, :null => false
+    t.boolean  "show_in_footer",   :default => false, :null => false
+    t.string   "foreign_link"
+    t.integer  "position",         :default => 1,     :null => false
+    t.boolean  "visible",          :default => true
+    t.string   "meta_keywords"
+    t.string   "meta_description"
+    t.string   "layout"
+    t.boolean  "show_in_sidebar",  :default => false, :null => false
+    t.string   "meta_title"
+  end
+
+  add_index "pages", ["slug"], :name => "index_pages_on_slug"
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -21,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20120117182621) do
     t.string   "name"
     t.string   "event_name"
     t.string   "type"
+    t.string   "path"
   end
 
   create_table "spree_addresses", :force => true do |t|
@@ -286,6 +308,14 @@ ActiveRecord::Schema.define(:version => 20120117182621) do
     t.string "payer_status"
   end
 
+  create_table "spree_pending_promotions", :force => true do |t|
+    t.integer "user_id"
+    t.integer "promotion_id"
+  end
+
+  add_index "spree_pending_promotions", ["promotion_id"], :name => "index_spree_pending_promotions_on_promotion_id"
+  add_index "spree_pending_promotions", ["user_id"], :name => "index_spree_pending_promotions_on_user_id"
+
   create_table "spree_preferences", :force => true do |t|
     t.text     "value"
     t.datetime "created_at"
@@ -498,7 +528,7 @@ ActiveRecord::Schema.define(:version => 20120117182621) do
     t.boolean  "match_one"
   end
 
-  create_table "spree_state_events", :force => true do |t|
+  create_table "spree_state_changes", :force => true do |t|
     t.integer  "stateful_id"
     t.integer  "user_id"
     t.string   "name"
@@ -521,6 +551,7 @@ ActiveRecord::Schema.define(:version => 20120117182621) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "is_default",  :default => false
+    t.datetime "deleted_at"
   end
 
   create_table "spree_tax_rates", :force => true do |t|
@@ -605,8 +636,8 @@ ActiveRecord::Schema.define(:version => 20120117182621) do
     t.string   "persistence_token"
     t.string   "reset_password_token"
     t.string   "perishable_token"
-    t.integer  "sign_in_count",        :default => 0, :null => false
-    t.integer  "failed_attempts",      :default => 0, :null => false
+    t.integer  "sign_in_count",          :default => 0, :null => false
+    t.integer  "failed_attempts",        :default => 0, :null => false
     t.datetime "last_request_at"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
@@ -619,6 +650,7 @@ ActiveRecord::Schema.define(:version => 20120117182621) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.datetime "remember_created_at"
+    t.datetime "reset_password_sent_at"
   end
 
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"

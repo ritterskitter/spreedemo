@@ -61,7 +61,6 @@
     $("a[rel='facebox']").fancybox();
 
 
-
     //search box
     if(!$.browser.webkit){
       var $input = $('#s1');
