@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -704,6 +703,35 @@ ActiveRecord::Schema.define(:version => 20120207143456) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "default_tax", :default => false
+  end
+
+  create_table "stylesheets", :force => true do |t|
+    t.string   "name"
+    t.text     "css"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "theme_id"
+  end
+
+  create_table "themes", :force => true do |t|
+    t.string   "name"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "view_overrides", :force => true do |t|
+    t.string   "virtual_path"
+    t.string   "name"
+    t.string   "replace_with"
+    t.string   "target"
+    t.string   "selector"
+    t.string   "closing_selector"
+    t.boolean  "disabled"
+    t.text     "replacement"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "theme_id"
   end
 
 end
