@@ -9,7 +9,7 @@ gem 'mysql'
 gem 'aws-sdk'
 gem 'hoptoad_notifier'
 
-gem 'spree', :git => 'git://github.com/spree/spree.git'
+gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '1-0-stable'
 
 gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git'
 gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git'
@@ -20,12 +20,11 @@ gem 'spree_social', :git => 'git://github.com/spree/spree_social.git', :branch =
 gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git', :branch => 'namespace'
 #gem 'spree_editor', :git => 'git://github.com/spree/spree_editor.git'
 gem 'spree_paypal_express',   :git => 'git://github.com/spree/spree_paypal_express.git'
-gem 'active_shipping'#,        :git => 'git://github.com/Shopify/active_shipping.git', :ref => '6be70c68574a9e420493' #only required until gem release 0.9.14 or later 
-#gem 'spree_active_shipping',  :git => 'git://github.com/spree/spree_active_shipping.git'
+gem 'spree_active_shipping',  :git => 'git://github.com/spree/spree_active_shipping.git'
 
 #gem 'spree_analytics', :git => 'https://ghro:btDMNirRZ8YF2V@github.com/spree/spree_analytics.git'
 
-gem 'spree_rdr_theme', :path => '../spree_rdr_theme'
+gem 'spree_rdr_theme', :git => '../spree_rdr_theme'
 gem 'capistrano'
 
 group :assets do
@@ -35,18 +34,16 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem "rspec-rails", ">= 2.0.1"
   gem "capybara", "= 0.4.0"
-  #gem 'ruby-debug'
+  gem 'ruby-debug'
   gem "launchy", ">= 0.3.7"
 end
 
 group :production do
   gem 'foreman'
-  gem 'mysql2'
   gem 'unicorn'
   gem 'therubyracer'
   gem 'newrelic_rpm'
