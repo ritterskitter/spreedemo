@@ -28,6 +28,20 @@ GIT
       spree_core (= 1.0.0)
     spree_cmd (1.0.0)
       rails (>= 3.1.1, <= 3.1.3)
+    spree_core (1.0.0)
+      activemerchant (= 1.20.1)
+      acts_as_list (= 0.1.4)
+      deface (>= 0.7.2)
+      ffaker (~> 1.12.0)
+      highline (= 1.6.8)
+      jquery-rails (>= 1.0.18, <= 1.0.19)
+      kaminari (>= 0.13.0)
+      meta_search (= 1.1.1)
+      nested_set (= 1.6.8)
+      paperclip (= 2.5.0)
+      rails (>= 3.1.1, <= 3.1.3)
+      state_machine (= 1.1.1)
+      stringex (~> 1.3.0)
     spree_dash (1.0.0)
       spree_core (= 1.0.0)
     spree_promo (1.0.0)
@@ -95,7 +109,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_wishlist.git
-  revision: 8baa2bbd15a02771eac5404913a1a1b874962fcb
+  revision: 34a2685d3327e960e66cc0e740654280762b71f1
   specs:
     spree_wishlist (1.2)
       spree_core (>= 1.0.0.rc3)
@@ -338,20 +352,6 @@ GEM
       ffi (~> 1.0.9)
       multi_json (~> 1.0.4)
       rubyzip
-    spree_core (1.0.0)
-      activemerchant (= 1.20.1)
-      acts_as_list (= 0.1.4)
-      deface (>= 0.7.2)
-      ffaker (~> 1.12.0)
-      highline (= 1.6.8)
-      jquery-rails (>= 1.0.18, <= 1.0.19)
-      kaminari (>= 0.13.0)
-      meta_search (= 1.1.1)
-      nested_set (= 1.6.8)
-      paperclip (= 2.5.0)
-      rails (>= 3.1.1, <= 3.1.3)
-      state_machine (= 1.1.1)
-      stringex (~> 1.3.0)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
