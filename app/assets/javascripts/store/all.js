@@ -14,3 +14,4 @@
 //= require jquery.fancybox-1.3.4
 //= require jcarousellite_1.3.1
 //= require store/rdr_wishlist
+//= require store/spree_wishlist

@@ -12,4 +12,5 @@
  *= require_tree .
  *= require store/rdr
  *= require store/social
+ *= require store/spree_wishlist
 */
