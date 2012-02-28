@@ -13,4 +13,5 @@
  *= require store/rdr
  *= require store/social
  *= require store/spree_wishlist
+ *= require store/spree_social
 */
