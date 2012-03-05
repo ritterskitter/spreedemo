@@ -24,7 +24,7 @@ gem 'spree_active_shipping',  :git => 'git://github.com/spree/spree_active_shipp
 
 #gem 'spree_analytics', :git => 'https://ghro:btDMNirRZ8YF2V@github.com/spree/spree_analytics.git'
 
-gem 'spree_rdr_theme', :path => '../spree_rdr_theme'
+gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
 gem 'capistrano'
 
 group :assets do
