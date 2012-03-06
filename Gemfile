@@ -18,7 +18,8 @@ gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git'
 gem 'spree_email_to_friend', :git => 'git://github.com/spree/spree_email_to_friend.git'
 
 gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git', :branch => '1-0-stable'
-#gem 'spree_editor', :git => 'git://github.com/spree/spree_editor.git'
+gem 'spree_editor', :git => 'git://github.com/spree/spree_editor.git'
+gem 'tinymce-rails', '>= 3.4.7.0.1'
 gem 'spree_paypal_express',   :git => 'git://github.com/spree/spree_paypal_express.git'
 gem 'spree_active_shipping',  :git => 'git://github.com/spree/spree_active_shipping.git'
 
