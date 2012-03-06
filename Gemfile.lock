@@ -97,7 +97,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_rdr_theme.git
-  revision: 8fe49ce022ce3c351ec2f3a1b8fe1dfbe5382045
+  revision: b0c5f81edd230ad58b20e403077f8cfe6ed78845
   specs:
     spree_rdr_theme (0.1.0)
 
