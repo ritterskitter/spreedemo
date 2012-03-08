@@ -1,6 +1,7 @@
 Spree::AppConfiguration.class_eval do
   preference :homepage_groups, :string, :default => ''
   preference :paypal_express_local_confirm, :boolean, :default => true
+  preference :mails_from, :string, :default => 'no-reply@spreecommerce.com'
 end
 
 # Spree::Config.set :homepage_groups => 'Slingbox,Satellite Radios,Boomboxes,Accessories,Internet Radios,Vehicle Installation'
