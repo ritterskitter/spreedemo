@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path => 'checkout/_payment',
+Deface::Override.new(:virtual_path => 'spree/checkout/_payment',
                      :name => 'add_address_to_payment_step',
                      :insert_before => 'ul#payment',
                      :sequence => {:after => 'replace_payment'},
@@ -78,7 +78,7 @@ Deface::Override.new(:virtual_path => 'checkout/_payment',
       <ul class="fields">
         <li>
           <%= check_box_tag 'order[use_billing]', '1', (!(@order.bill_address.empty? && @order.ship_address.empty?) && @order.bill_address.eql?(@order.ship_address)) %>
-          <label class="tick">Use my shipping address</label>
+          <label class="tick">Use my billing address</label>
         </li>
       </ul>
       <ul class="inner fields">
@@ -134,7 +134,7 @@ Deface::Override.new(:virtual_path => 'checkout/_payment',
         <li>
           <%= ship_form.label :country_id, "Country" %>
           <span id="scountry">
-            <%= ship_form.collection_select :country_id, Country.all, :id, :name %>
+            <%= ship_form.collection_select :country_id, Spree::Country.all, :id, :name %>
           </span>
         </li>
         <li>

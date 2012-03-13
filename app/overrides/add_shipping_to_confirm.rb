@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path => "checkout/_confirm",
+Deface::Override.new(:virtual_path => "spree/checkout/_confirm",
                           :name => "add_shipping_to_confirm",
                           :insert_before => "div#order-items",
                           :sequence => {:after => "replace_confirm" },

@@ -1,4 +1,4 @@
-CheckoutController.class_eval do
+Spree::CheckoutController.class_eval do
 
   before_filter :body_id
 
@@ -7,7 +7,7 @@ CheckoutController.class_eval do
     if current_order.update_attributes(params[:order])
       redirect_to checkout_path
     else
-      @user = User.new
+      @user = Spree::User.new
       render 'registration'
     end
   end
@@ -16,7 +16,7 @@ CheckoutController.class_eval do
   def update
     if @order.update_attributes(object_params)
 
-      if @order.confirm? && @order.payment.payment_method.is_a?(BillingIntegration::PaypalExpress)
+      if @order.confirm? && @order.payment.payment_method.is_a?(Spree::BillingIntegration::PaypalExpress)
         @order.create_shipment! #in case shipping method has changed
 
         redirect_to paypal_payment_order_checkout_url @order, :payment_method_id => @order.payment.payment_method

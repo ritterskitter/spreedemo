@@ -1,6 +1,6 @@
 StateMachine::Machine.ignore_method_conflicts = true
 
-Order.class_eval do
+Spree::Order.class_eval do
 
   state_machines.clear
   state_machine :initial => 'cart', :use_transactions => false do
@@ -52,7 +52,7 @@ Order.class_eval do
       shipment.shipping_method = shipping_method
       shipment.save
     else
-      self.shipments << Shipment.create(:order => self, :shipping_method => shipping_method, :address => self.ship_address)
+      self.shipments << Spree::Shipment.create(:order => self, :shipping_method => shipping_method, :address => self.ship_address)
     end
   end
 
