@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'rails', '3.1.3'
-gem 'mysql'
+gem 'mysql2'
 
 gem 'aws-sdk'
 gem 'hoptoad_notifier'

@@ -1,7 +1,7 @@
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
 require "bundler/capistrano"
-load 'deploy/assets'
+# load 'deploy/assets'
 
 set :application, "demo"
 set :user, 'spree'
@@ -58,7 +58,7 @@ namespace :deploy do
 
   desc "Compile assets"
   task :precompile_assets, :roles => :app do
-    run "cd #{current_path} && rake assets:precompile"
+    run "cd #{current_path} && bundle exec rake assets:precompile"
   end
 end
 
