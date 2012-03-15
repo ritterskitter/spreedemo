@@ -7,7 +7,7 @@ gem 'rails', '3.1.3'
 gem 'mysql2'
 
 gem 'aws-sdk'
-gem 'hoptoad_notifier'
+gem 'airbrake'
 
 gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '1-0-stable'
 

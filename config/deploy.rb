@@ -66,3 +66,6 @@ after 'deploy:update_code', 'deploy:symlink_shared'
 after 'deploy:symlink_shared', 'deploy:precompile_assets'
 after 'deploy:update', 'foreman:export'
 after 'deploy:update', 'foreman:restart'
+
+        require './config/boot'
+        require 'airbrake/capistrano'

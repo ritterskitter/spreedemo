@@ -64,11 +64,11 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_active_shipping.git
-  revision: e53dba0632dc73367b76722fb4cee3102d3b19f8
+  revision: db409f2fca63438cc263c06088f698ba6241a52d
   specs:
     spree_active_shipping (1.1.0)
       active_shipping (= 0.9.13)
-      spree_core (>= 1.0.0.rc3)
+      spree_core (~> 1.0.0)
 
 GIT
   remote: git://github.com/spree/spree_editor.git
@@ -117,7 +117,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_static_content.git
-  revision: 519283c0afe9656a8121067d780bf61bcc20a91c
+  revision: 4a3a14c9781ab82a4e19bf5e56b62941805aba75
   branch: 1-0-stable
   specs:
     spree_static_content (1.0.1)
@@ -126,9 +126,9 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_wishlist.git
-  revision: 1a0228ec3d913dc0b0c17fbe73202934ce2ddad1
+  revision: 9420521b07707c3e1b6f12714290657cad964279
   specs:
-    spree_wishlist (1.2)
+    spree_wishlist (1.3)
       spree_auth (>= 1.0.0)
       spree_core (>= 1.0.0)
 
@@ -178,6 +178,9 @@ GEM
       multi_json (~> 1.0)
     acts_as_list (0.1.4)
     addressable (2.2.7)
+    airbrake (3.0.9)
+      activesupport
+      builder
     arel (2.2.3)
     aws-sdk (1.3.6)
       httparty (~> 0.7)
@@ -242,9 +245,6 @@ GEM
     hashie (1.2.0)
     highline (1.6.8)
     hike (1.2.1)
-    hoptoad_notifier (2.4.11)
-      activesupport
-      builder
     httparty (0.8.1)
       multi_json
       multi_xml
@@ -257,11 +257,11 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
-    kgio (2.7.2)
+    kgio (2.7.3)
     launchy (2.0.5)
       addressable (~> 2.2.6)
     libv8 (3.3.10.4)
-    mail (2.3.2)
+    mail (2.3.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -407,6 +407,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake
   aws-sdk
   capistrano
   capybara (= 0.4.0)
@@ -415,7 +416,6 @@ DEPENDENCIES
   deface!
   factory_girl_rails
   foreman
-  hoptoad_notifier
   launchy (>= 0.3.7)
   mysql2
   newrelic_rpm
