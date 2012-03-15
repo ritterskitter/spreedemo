@@ -1,17 +1,4 @@
 GIT
-  remote: git://github.com/LBRapid/spree_social.git
-  revision: c43c4b162c30cb78a3b119d9496c0300270ded99
-  specs:
-    spree_social (2.0.0)
-      oa-core
-      omniauth
-      omniauth-facebook
-      omniauth-github
-      omniauth-twitter
-      spree_auth (~> 1.0.0)
-      spree_core (~> 1.0.0)
-
-GIT
   remote: git://github.com/railsdog/deface.git
   revision: d749e05cc971411026e5dea24afb304e8125d360
   specs:
@@ -114,6 +101,20 @@ GIT
     spree_related_products (3.2)
       spree_core (~> 1.0.0)
       spree_promo (~> 1.0.0)
+
+GIT
+  remote: git://github.com/spree/spree_social.git
+  revision: ad5968e4d17c6b2f0ee088674fe5154dfe1785e8
+  branch: debug-env
+  specs:
+    spree_social (2.0.0)
+      oa-core
+      omniauth
+      omniauth-facebook
+      omniauth-github
+      omniauth-twitter
+      spree_auth (~> 1.0.0)
+      spree_core (~> 1.0.0)
 
 GIT
   remote: git://github.com/spree/spree_static_content.git

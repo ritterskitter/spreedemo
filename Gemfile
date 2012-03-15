@@ -13,7 +13,7 @@ gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '1-0-stable'
 
 gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git'
 gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git'
-gem 'spree_social', :git => 'git://github.com/LBRapid/spree_social.git'
+gem 'spree_social', :git => 'git://github.com/spree/spree_social.git', :branch => 'debug-env'
 gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git'
 gem 'spree_email_to_friend', :git => 'git://github.com/spree/spree_email_to_friend.git'
 
