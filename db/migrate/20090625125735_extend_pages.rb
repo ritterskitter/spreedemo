@@ -5,8 +5,9 @@ class ExtendPages < ActiveRecord::Migration
       t.boolean :show_in_footer, :default => false, :null => false
       t.string  :foreign_link
       t.integer :position, :default => 1, :null => false
-      Page.all(:order => "updated_at ASC").each_with_index{|page,x| page.update_attribute(:position, x+1)}
-
+      Page.order('updated_at ASC').each_with_index{ |page,index|
+        page.update_attribute(:position, index + 1)
+      }
     end
   end
 
