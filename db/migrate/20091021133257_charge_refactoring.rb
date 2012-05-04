@@ -3,6 +3,9 @@ class ChargeRefactoring < ActiveRecord::Migration
   class Checkout < ActiveRecord::Base
   end
 
+  class Adjustment < ActiveRecord::Base
+  end
+
   # Hack to prevent issues with legacy migrations
   class Order < ActiveRecord::Base
     has_one :checkout

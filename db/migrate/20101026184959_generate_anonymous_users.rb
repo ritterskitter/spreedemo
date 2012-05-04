@@ -1,4 +1,9 @@
 class GenerateAnonymousUsers < ActiveRecord::Migration
+class Order < ActiveRecord::Base
+end
+class User < ActiveRecord::Base
+end
+
   def self.up
     User.reset_column_information
     Order.where(:user_id => nil).each do |order|

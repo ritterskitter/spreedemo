@@ -1,4 +1,10 @@
 class AddCountOnHandToVariantsAndProducts < ActiveRecord::Migration
+  class Variant < ActiveRecord::Base
+  end
+
+  class Product < ActiveRecord::Base
+  end
+  
   def self.up
     add_column :variants, :count_on_hand, :integer, :default => 0, :null => false
     add_column :products, :count_on_hand, :integer, :default => 0, :null => false

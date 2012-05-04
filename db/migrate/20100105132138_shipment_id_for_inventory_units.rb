@@ -1,4 +1,7 @@
 class ShipmentIdForInventoryUnits < ActiveRecord::Migration
+  class Shipment < ActiveRecord::Base
+  end
+
   def self.up
     add_column "inventory_units", "shipment_id", :integer
     add_index(:inventory_units, :shipment_id)
