@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class Object - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/spree/base_controller_decorator.rb
+    <li>app/controllers/spree/checkout_controller_decorator.rb
+    <li>app/controllers/spree/products_controller_decorator.rb
+    <li>app/helpers/spree/base_helper_decorator.rb
+    <li>app/helpers/spree/taxons_helper_decorator.rb
+    <li>app/models/spree/order_decorator.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">BasicObject
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-before_confirm">#before_confirm</a>
+    
+    <li><a href="#method-i-before_payment">#before_payment</a>
+    
+    <li><a href="#method-i-body_id">#body_id</a>
+    
+    <li><a href="#method-i-breadcrumbs">#breadcrumbs</a>
+    
+    <li><a href="#method-i-create_shipment-21">#create_shipment!</a>
+    
+    <li><a href="#method-i-link_to_cart">#link_to_cart</a>
+    
+    <li><a href="#method-i-load_pg">#load_pg</a>
+    
+    <li><a href="#method-i-load_root_taxons">#load_root_taxons</a>
+    
+    <li><a href="#method-i-object_params">#object_params</a>
+    
+    <li><a href="#method-i-redirect_to_paypal_express_form_if_needed">#redirect_to_paypal_express_form_if_needed</a>
+    
+    <li><a href="#method-i-set_shipping">#set_shipping</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+    <li><a href="#method-i-update_registration">#update_registration</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Spree.html">Spree</a>
+  
+    <li><a href="./Spree/CheckoutHelper.html">Spree::CheckoutHelper</a>
+  
+    <li><a href="./Spree/HomepageController.html">Spree::HomepageController</a>
+  
+    <li><a href="./Spree/UserDecorator.html">Spree::UserDecorator</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./NavController.html">NavController</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Object</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="PG_REFERER_REGEXP">PG_REFERER_REGEXP
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-before_confirm" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">before_confirm</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="before_confirm-source">
+            <pre><span class="ruby-comment"># File app/controllers/spree/checkout_controller_decorator.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">before_confirm</span>
+  <span class="ruby-identifier">before_delivery</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- before_confirm-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- before_confirm-method -->
+
+    
+      <div id="method-i-before_payment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">before_payment</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="before_payment-source">
+            <pre><span class="ruby-comment"># File app/controllers/spree/checkout_controller_decorator.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">before_payment</span>
+  <span class="ruby-identifier">before_address</span>
+  <span class="ruby-identifier">current_order</span>.<span class="ruby-identifier">payments</span>.<span class="ruby-identifier">destroy_all</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">put?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- before_payment-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- before_payment-method -->
+
+    
+      <div id="method-i-body_id" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">body_id</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="body_id-source">
+            <pre><span class="ruby-comment"># File app/controllers/spree/checkout_controller_decorator.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">body_id</span>
+  <span class="ruby-ivar">@body_id</span> = <span class="ruby-string">&quot;checkout&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- body_id-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- body_id-method -->
+
+    
+      <div id="method-i-breadcrumbs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">breadcrumbs</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="breadcrumbs-source">
+            <pre><span class="ruby-comment"># File app/helpers/spree/taxons_helper_decorator.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">breadcrumbs</span>(<span class="ruby-identifier">options</span>={})
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_page?</span>(<span class="ruby-string">&quot;/&quot;</span>)
+
+  <span class="ruby-identifier">options</span>.<span class="ruby-identifier">reverse_merge!</span> <span class="ruby-value">:taxon</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:product</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:separator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&amp;nbsp;&amp;raquo;&amp;nbsp;&quot;</span>
+
+  <span class="ruby-identifier">taxon</span>         = <span class="ruby-identifier">options</span>[<span class="ruby-value">:taxon</span>]
+  <span class="ruby-identifier">product</span>       = <span class="ruby-identifier">options</span>[<span class="ruby-value">:product</span>]
+  <span class="ruby-identifier">product_group</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:product_group</span>]
+  <span class="ruby-identifier">separator</span>     = <span class="ruby-identifier">raw</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:separator</span>])
+
+  <span class="ruby-identifier">crumbs</span> = [<span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:li</span>, <span class="ruby-identifier">link_to</span>(<span class="ruby-identifier">t</span>(<span class="ruby-value">:home</span>) , <span class="ruby-identifier">root_path</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">separator</span>)]
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon</span>
+    <span class="ruby-identifier">crumbs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">ancestors</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">ancestor</span><span class="ruby-operator">|</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:li</span>, <span class="ruby-identifier">link_to</span>(<span class="ruby-identifier">ancestor</span>.<span class="ruby-identifier">name</span> , <span class="ruby-identifier">seo_url</span>(<span class="ruby-identifier">ancestor</span>)) <span class="ruby-operator">+</span> <span class="ruby-identifier">separator</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">ancestor</span>.<span class="ruby-identifier">root?</span> }.<span class="ruby-identifier">compact</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">ancestors</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">product</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon</span>
+      <span class="ruby-identifier">crumbs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:li</span>, <span class="ruby-identifier">link_to</span>(<span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">seo_url</span>(<span class="ruby-identifier">taxon</span>)) <span class="ruby-operator">+</span> <span class="ruby-identifier">separator</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">product_group</span>
+      <span class="ruby-identifier">crumbs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:li</span>, <span class="ruby-identifier">link_to</span>(<span class="ruby-identifier">product_group</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">pg_search_path</span>(<span class="ruby-value">:product_group_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">product_group</span>.<span class="ruby-identifier">permalink</span>)) <span class="ruby-operator">+</span> <span class="ruby-identifier">separator</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">crumbs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:li</span>, <span class="ruby-identifier">link_to</span>(<span class="ruby-string">&quot;Products&quot;</span>, <span class="ruby-identifier">products_url</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">separator</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">crumbs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:li</span>, <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:span</span>, <span class="ruby-identifier">product</span>.<span class="ruby-identifier">name</span>))
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">taxon</span>
+    <span class="ruby-identifier">crumbs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:li</span>, <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:span</span>, <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">name</span>))
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">product_group</span>
+    <span class="ruby-identifier">crumbs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:li</span>, <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:span</span>, <span class="ruby-identifier">product_group</span>.<span class="ruby-identifier">name</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">crumbs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:li</span>, <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:span</span>, <span class="ruby-string">&quot;Products&quot;</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">crumb_list</span> = <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:ul</span>, <span class="ruby-identifier">raw</span>(<span class="ruby-identifier">crumbs</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">li</span><span class="ruby-operator">|</span> <span class="ruby-identifier">li</span>.<span class="ruby-identifier">mb_chars</span>}.<span class="ruby-identifier">join</span>))
+  <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-identifier">crumb_list</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">tag</span>(<span class="ruby-value">:br</span>, {<span class="ruby-value">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'clear'</span>}, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>), <span class="ruby-value">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'breadcrumbs'</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- breadcrumbs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- breadcrumbs-method -->
+
+    
+      <div id="method-i-create_shipment-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_shipment!</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_shipment-21-source">
+            <pre><span class="ruby-comment"># File app/models/spree/order_decorator.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_shipment!</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">shipping_method</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">available_shipping_methods</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">save</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">shipment</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">shipment</span>.<span class="ruby-identifier">shipping_method</span> = <span class="ruby-identifier">shipping_method</span>
+    <span class="ruby-identifier">shipment</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">shipments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Spree</span><span class="ruby-operator">::</span><span class="ruby-constant">Shipment</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>, <span class="ruby-value">:shipping_method</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">shipping_method</span>, <span class="ruby-value">:address</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ship_address</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create_shipment-21-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create_shipment-21-method -->
+
+    
+      <div id="method-i-link_to_cart" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">link_to_cart</span><span
+            class="method-args">(text = t('cart'))</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="link_to_cart-source">
+            <pre><span class="ruby-comment"># File app/helpers/spree/base_helper_decorator.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">link_to_cart</span>(<span class="ruby-identifier">text</span> = <span class="ruby-identifier">t</span>(<span class="ruby-string">'cart'</span>))
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_page?</span>(<span class="ruby-identifier">cart_path</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_order</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">current_order</span>.<span class="ruby-identifier">line_items</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">text</span> = <span class="ruby-node">&quot;#{text}($0.00)&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">text</span> = <span class="ruby-node">&quot;#{text}(#{order_subtotal(current_order)})&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">link_to</span> <span class="ruby-identifier">text</span>, <span class="ruby-identifier">cart_path</span>, <span class="ruby-value">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;cart&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- link_to_cart-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- link_to_cart-method -->
+
+    
+      <div id="method-i-load_pg" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_pg</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="load_pg-source">
+            <pre><span class="ruby-comment"># File app/controllers/spree/products_controller_decorator.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_pg</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">key?</span> <span class="ruby-value">:product_group_name</span>
+    <span class="ruby-ivar">@product_group</span> = <span class="ruby-constant">Spree</span><span class="ruby-operator">::</span><span class="ruby-constant">ProductGroup</span>.<span class="ruby-identifier">find_by_permalink</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:product_group_name</span>])
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">referer</span> = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">env</span>[<span class="ruby-string">'HTTP_REFERER'</span>]
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">referer</span>  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">referer</span>.<span class="ruby-identifier">match</span>(<span class="ruby-constant">PG_REFERER_REGEXP</span>)
+      <span class="ruby-ivar">@product_group</span> = <span class="ruby-constant">Spree</span><span class="ruby-operator">::</span><span class="ruby-constant">ProductGroup</span>.<span class="ruby-identifier">find_by_permalink</span>(<span class="ruby-node">$1</span>)
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- load_pg-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- load_pg-method -->
+
+    
+      <div id="method-i-load_root_taxons" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_root_taxons</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="load_root_taxons-source">
+            <pre><span class="ruby-comment"># File app/controllers/spree/base_controller_decorator.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_root_taxons</span>
+  <span class="ruby-ivar">@taxons</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Spree</span><span class="ruby-operator">::</span><span class="ruby-constant">Taxonomy</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Categories&quot;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">children</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- load_root_taxons-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- load_root_taxons-method -->
+
+    
+      <div id="method-i-object_params" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">object_params</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="object_params-source">
+            <pre><span class="ruby-comment"># File app/controllers/spree/checkout_controller_decorator.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">object_params</span>
+  <span class="ruby-comment"># For payment step, filter order parameters to produce the expected nested attributes for a single payment and its source, discarding attributes for payment methods other than the one selected</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">payment?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-value">:payment_source</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:payment_source</span>].<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">source_params</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:payment_source</span>)[<span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>][<span class="ruby-value">:payments_attributes</span>].<span class="ruby-identifier">first</span>[<span class="ruby-value">:payment_method_id</span>].<span class="ruby-identifier">underscore</span>]
+      <span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>][<span class="ruby-value">:payments_attributes</span>].<span class="ruby-identifier">first</span>[<span class="ruby-value">:source_attributes</span>] = <span class="ruby-identifier">source_params</span>
+      <span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>][<span class="ruby-value">:payments_attributes</span>].<span class="ruby-identifier">first</span>[<span class="ruby-value">:source_attributes</span>][<span class="ruby-value">:first_name</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>][<span class="ruby-value">:bill_address_attributes</span>][<span class="ruby-value">:firstname</span>]
+      <span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>][<span class="ruby-value">:payments_attributes</span>].<span class="ruby-identifier">first</span>[<span class="ruby-value">:source_attributes</span>][<span class="ruby-value">:last_name</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>][<span class="ruby-value">:bill_address_attributes</span>][<span class="ruby-value">:lastname</span>]
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>][<span class="ruby-value">:payments_attributes</span>]
+      <span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>][<span class="ruby-value">:payments_attributes</span>].<span class="ruby-identifier">first</span>[<span class="ruby-value">:amount</span>] = <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">total</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- object_params-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- object_params-method -->
+
+    
+      <div id="method-i-redirect_to_paypal_express_form_if_needed" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">redirect_to_paypal_express_form_if_needed</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="redirect_to_paypal_express_form_if_needed-source">
+            <pre><span class="ruby-comment"># File app/controllers/spree/checkout_controller_decorator.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">redirect_to_paypal_express_form_if_needed</span>
+  <span class="ruby-comment">#just overrides method from ext</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- redirect_to_paypal_express_form_if_needed-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- redirect_to_paypal_express_form_if_needed-method -->
+
+    
+      <div id="method-i-set_shipping" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_shipping</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="set_shipping-source">
+            <pre><span class="ruby-comment"># File app/controllers/spree/checkout_controller_decorator.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_shipping</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">object_params</span>)
+    <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">create_shipment!</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">reload</span>.<span class="ruby-identifier">to_json</span>(<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:adjustments</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_shipping-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_shipping-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>overriden the handle ppx payment/redirect</p>
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/spree/checkout_controller_decorator.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">object_params</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">confirm?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payment_method</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Spree</span><span class="ruby-operator">::</span><span class="ruby-constant">BillingIntegration</span><span class="ruby-operator">::</span><span class="ruby-constant">PaypalExpress</span>)
+      <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">create_shipment!</span> <span class="ruby-comment">#in case shipping method has changed</span>
+
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">paypal_payment_order_checkout_url</span> <span class="ruby-ivar">@order</span>, <span class="ruby-value">:payment_method_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payment_method</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">next</span>
+        <span class="ruby-identifier">state_callback</span>(<span class="ruby-value">:after</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-value">:payment_processing_failed</span>)
+        <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">checkout_state_path</span>(<span class="ruby-ivar">@order</span>.<span class="ruby-identifier">state</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">state</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;complete&quot;</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">completed?</span>
+        <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-value">:order_processed_successfully</span>)
+        <span class="ruby-identifier">flash</span>[<span class="ruby-value">:commerce_tracking</span>] = <span class="ruby-string">&quot;nothing special&quot;</span>
+        <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">completion_route</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">checkout_state_path</span>(<span class="ruby-ivar">@order</span>.<span class="ruby-identifier">state</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:edit</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+      <div id="method-i-update_registration" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_registration</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update_registration-source">
+            <pre><span class="ruby-comment"># File app/controllers/spree/checkout_controller_decorator.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_registration</span>
+  <span class="ruby-identifier">current_order</span>.<span class="ruby-identifier">state</span> = <span class="ruby-string">&quot;payment&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_order</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>])
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">checkout_path</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">Spree</span><span class="ruby-operator">::</span><span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-string">'registration'</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_registration-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_registration-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
